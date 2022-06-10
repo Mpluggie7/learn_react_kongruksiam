@@ -6,7 +6,6 @@ import DataContext from "./data/DataContext";
 import ReportComponent from "./components/ReportComponent";
 import {
   BrowserRouter as Router,
-  Switch,
   Route,
   Link,
   Routes,
@@ -38,8 +37,8 @@ function App() {
       .filter((element) => element < 0)
       .reduce((total, element) => total + Math.abs(element), 0);
 
-    setReportIncome(income);
-    setReportExpense(expense);
+    setReportIncome(income.toFixed(2));
+    setReportExpense(expense.toFixed(2));
   }, [items, reportIncome, reportExpense]);
 
   // const [showReport, setShowReport] = useState(false);
